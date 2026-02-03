@@ -1,0 +1,26 @@
+#Dunder method / Magic method / Special method
+
+class Demo:
+    def __init__(self, A):
+        self.No  = A
+
+    def __add__(self, other):
+        return (self.No + other.No)
+    
+    def __sub__(self, other):
+        return (self.No - other.No)
+    
+    def __mul__(self, other):
+        return (self.No * other.No)
+    
+    def __truediv__(self, other):
+        return (self.No / other.No)
+
+obj1 = Demo(11)
+obj2 = Demo(21)
+
+#print(11+21)           #32
+print(obj1+obj2)        #this goes to __add__(self->obj1 , other->obj2)
+print(obj1-obj2)
+print(obj1*obj2)
+print(obj1/obj2)
